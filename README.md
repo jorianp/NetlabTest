@@ -1,6 +1,6 @@
 # Тестовое задание от Netlab
 
-## [NetlabTest](https://jorianp.github.io/NewsAnalyzer)
+## [NetlabTest](https://jorianp.github.io/NetlabTest)
 
 ## Задание
 

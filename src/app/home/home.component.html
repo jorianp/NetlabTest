@@ -1,0 +1,11 @@
+<div class="home">
+  <p class="home__title">Form data:</p>
+  <p *ngIf="data == null">Форма пока не заполнена</p>
+  <div class="home__info" *ngIf="data">
+    <p><strong>ФИО:</strong> {{data.name}}</p>
+    <p><strong>E-mail:</strong> {{data.email}}</p>
+    <p><strong>Тема:</strong> {{data.select}}</p>
+  </div>
+  <button class="home__button" type="button" routerLink="/form" *ngIf="data == null">Заполнить форму</button>
+  <button class="home__button" type="button" [routerLink]="['/form', 'edit']" *ngIf="data">Изменить</button>
+</div>

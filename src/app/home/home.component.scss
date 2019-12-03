@@ -1,0 +1,33 @@
+.home {
+  margin-top: 88px;
+  margin-left: 72px;
+  font-family: LetoSans;
+
+  &__info {
+    margin-top: 40px;
+  }
+
+  &__button {
+    width: 232px;
+    height: 48px;
+
+    margin-top: 37px;
+
+    border-radius: 44px;
+    background: #13C98A;
+    border: none;
+
+    outline: none;
+    cursor: pointer;
+
+    font-family: LetoSans;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    color: #FFFFFF;
+  }
+
+  &__button:hover {
+    border: 2px solid #2E09B6;
+  }
+}

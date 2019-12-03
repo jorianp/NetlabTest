@@ -1,4 +1,24 @@
-# NetlabTest
+# Тестовое задание от Netlab
+
+## [NetlabTest](https://jorianp.github.io/NewsAnalyzer)
+
+## Задание
+
+Приложение на Angular 8. 
+
+Роутниг: - “/” - рутовый роут - “/form” - роут c lazy-загрузкой на котором находится форма для заполнения 
+
+State-менеджмент: - NGXS или NGRX 
+
+При первой загрузке выводится сообщение - Форма пока не заполнена, После того, как пользователь заполнил форму и нажал на кнопку “отправить” - либо подсвечиваются поля не прошедшие валидацию, либо, в случае, если все заполнено верно, пользователя перебрасывает на рутовый роут, где вместо надписи “Форма пока не заполнена” выводятся поля формы и значения этих полей. Кнопка “заполнить форму” изменяется на “Изменить”, при нажатии на нее, пользователь переходит на роут /form/edit, где может изменить заполненные ранее данные:
+```
+Form data: 
+
+ФИО: Иван Иванович
+E-mail: info@mail.com
+Тема: Тема 1
+
+```
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.19.
 
@@ -14,14 +34,5 @@ Run `ng generate component component-name` to generate a new component. You can 
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+## Deploy to Gh-pages
+Run `ng deploy`

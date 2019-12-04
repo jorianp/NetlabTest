@@ -2,8 +2,10 @@
   <form action="" class="form__content" [formGroup]="form" (ngSubmit)="submit()">
     <h2 class="form__title">Форма для тебя</h2>
     <div class="form__input">
-      <label for=""></label>
-      <input class="form__name" type="text" formControlName="name" placeholder="Представьтесь пожалуйста">
+      <mat-form-field>
+        <mat-label style="color: #9B99AA;">Представьтесь пожалуйста</mat-label>
+        <input matInput type="text" formControlName="name">
+      </mat-form-field>
       <div class="wrong" *ngIf="form.get('name').invalid && form.get('name').touched">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <circle cx="12" cy="12" r="12" fill="#F8478D"/>
@@ -28,8 +30,10 @@
       </div>
     </div>
     <div class="form__input">
-      <label for=""></label>
-      <input class="form__email" type="text" formControlName="email" placeholder="Введите ваш e-mail">
+      <mat-form-field>
+        <mat-label style="color: #9B99AA;">Введите ваш e-mail</mat-label>
+        <input matInput type="text" formControlName="email">
+      </mat-form-field>
       <div class="wrong" *ngIf="form.get('email').invalid && form.get('email').touched">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <circle cx="12" cy="12" r="12" fill="#F8478D"/>
@@ -53,23 +57,26 @@
         </svg>
       </div>
     </div>
-    <div class="form__selectDrop">
-      <select class="form__select" name="" id="" formControlName="select">
-        <option value="0" value selected disabled>Тема сообщения</option>
-        <option style="color: #000000" value="Тема 1">Тема 1</option>
-        <option value="Тема 2">Тема 2</option>
-        <option value="Тема 3">Тема 3</option>
-        <option value="Тема 4">Тема 4</option>
-      </select>
-      <svg class="arrow" width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M1.35355 0.646447C1.15829 0.451184 0.841709 0.451184 0.646447 0.646447C0.451184 0.841709 0.451184 1.15829 0.646447 1.35355L1.35355 0.646447ZM6 6L5.64645 6.35355L6 6.70711L6.35355 6.35355L6 6ZM11.3536 1.35355C11.5488 1.15829 11.5488 0.841709 11.3536 0.646447C11.1583 0.451184 10.8417 0.451184 10.6464 0.646447L11.3536 1.35355ZM0.646447 1.35355L5.64645 6.35355L6.35355 5.64645L1.35355 0.646447L0.646447 1.35355ZM6.35355 6.35355L11.3536 1.35355L10.6464 0.646447L5.64645 5.64645L6.35355 6.35355Z" fill="#202020"/>
-      </svg>
+
+    <mat-form-field class="form__select">
+      <mat-label style="color: #9B99AA;">Тема сообщения</mat-label>
+      <mat-select formControlName="select">
+        <mat-option *ngFor="let theme of themes" [value]="theme.viewValue">
+          {{theme.viewValue}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <div class="form__area1">
+      <mat-form-field>
+        <mat-label style="color: #9B99AA;">Введите сообщение</mat-label>
+        <textarea matInput name="" id="" cols="30" rows="10" formControlName="area"></textarea>
+      </mat-form-field>
     </div>
-    <textarea class="form__area" name="" id="" cols="30" rows="10" formControlName="area" placeholder="Введите сообщение"></textarea>
     <div class="form__buttons">
       <button type="button" class="form__reset" (click)="form.reset()">Сбросить</button>
       <button type="submit" class="form__submit" [disabled]="form.invalid || form.pending" (click)="submit()" routerLink="/">Отправить</button>
     </div>
+
   </form>
 </div>
 

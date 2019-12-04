@@ -6,7 +6,10 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { FormComponent } from './form/form.component';
 import { EditComponent } from './edit/edit.component';
-import {ReactiveFormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {DemoMaterialModule} from './form/material-module';
+import {MatNativeDateModule} from '@angular/material';
 
 @NgModule({
   declarations: [
@@ -17,8 +20,12 @@ import {ReactiveFormsModule} from '@angular/forms';
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    FormsModule,
+    ReactiveFormsModule,
+    DemoMaterialModule,
+    MatNativeDateModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -8,13 +8,14 @@
 
   &__input {
     position: relative;
+    margin-top: 16px;
 
     .ng-invalid.ng-touched {
       border: 2px solid #F8478D;
     }
     .wrong {
       position: absolute;
-      top: 32px;
+      top: 20px;
       right: 35px;
     }
     .ng-valid.ng-touched {
@@ -23,7 +24,7 @@
 
     .correct {
       position: absolute;
-      top: 32px;
+      top: 20px;
       right: 35px;
     }
   }
@@ -119,9 +120,6 @@
 
     position: relative;
 
-    padding-left: 16px;
-    padding-top: 5px;
-
     outline: none;
     cursor: pointer;
 
@@ -144,11 +142,6 @@
   &__area {
     width: 336px;
     height: 99px;
-    margin-left: 22px;
-    margin-top: 16px;
-
-    padding-left: 16px;
-    padding-top: 15px;
 
     outline: none;
     border: 2px solid #EDE8F7;
@@ -214,5 +207,53 @@
   &__submit:hover {
     border: 2px solid #2E09B6;
   }
+
+}
+
+::ng-deep mat-form-field {
+  width: 331px;
+  height: 56px;
+  border: 2px solid #EDE8F7;
+  margin-left: 22px;
+  border-radius: 6px;
+
+}
+
+::ng-deep mat-form-field:hover {
+  border: 2px solid #C0BAD5;
+}
+
+::ng-deep mat-form-field .mat-form-element:focus {
+  border: 2px solid #C0BAD5;
+}
+
+::ng-deep .mat-form-field-wrapper {
+  padding-left: 16px;
+}
+
+::ng-deep .mat-form-field-autofill-control {
+  border: none !important;
+}
+
+::ng-deep .mat-form-field-underline {
+  display: none;
+}
+
+::ng-deep mat-form-field::placeholder {
+  color: #9B99AA;
+}
+
+::ng-deep .form__area1 .mat-form-field {
+  height: 99px;
+  margin-top: 16px;
+
+  textarea {
+    width: 336px;
+    height: 75px;
+    resize: none;
+  }
+}
+
+::ng-deep .mat-select-panel {
 
 }
